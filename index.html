@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>С Днем Рождения, Мама!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #a1c4fd);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        color: #333;
+        overflow-x: hidden;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+      }
+
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .container {
+        max-width: 800px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+        animation: fadeIn 2s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .header {
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: #ff6b6b;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .age {
+        font-size: 5rem;
+        font-weight: bold;
+        color: #ff9a3c;
+        margin: 20px 0;
+        text-shadow: 3px 3px 0 #ff6b6b;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .message {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        color: #555;
+        text-align: left;
+        padding: 0 20px;
+      }
+
+      .wishes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin: 30px 0;
+      }
+
+      .wish {
+        background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+        padding: 15px;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        animation: float 3s ease-in-out infinite;
+        animation-delay: calc(var(--delay) * 0.5s);
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .flowers {
+        display: flex;
+        justify-content: space-around;
+        margin: 30px 0;
+      }
+
+      .flower {
+        font-size: 3rem;
+        animation: rotate 4s linear infinite;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .heart {
+        position: absolute;
+        font-size: 1.5rem;
+        color: #ff6b6b;
+        animation: fall 5s linear infinite;
+      }
+
+      @keyframes fall {
+        0% {
+          top: -10%;
+          opacity: 1;
+        }
+        100% {
+          top: 110%;
+          opacity: 0;
+        }
+      }
+
+      .signature {
+        margin-top: 30px;
+        font-style: italic;
+        color: #ff6b6b;
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+        .age {
+          font-size: 4rem;
+        }
+        .message {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>С Днем Рождения, Мама!</h1>
+        <div class="age">44</div>
+      </div>
+
+      <div class="message">
+        <p>
+          Дорогая мама! В этот особенный день я хочу поздравить тебя с твоим
+          44-летием! Ты - самый светлый и добрый человек в моей жизни, источник
+          тепла, заботы и бесконечной любви.
+        </p>
+        <p>
+          Твоя мудрость, терпение и поддержка всегда были для меня опорой. Ты
+          умеешь находить радость в мелочах и дарить счастье окружающим. В этот
+          день я желаю тебе крепкого здоровья, безграничного счастья, исполнения
+          всех желаний и много-много прекрасных моментов!
+        </p>
+      </div>
+
+      <div class="wishes">
+        <div class="wish" style="--delay: 1">Здоровья</div>
+        <div class="wish" style="--delay: 2">Счастья</div>
+        <div class="wish" style="--delay: 3">Любви</div>
+        <div class="wish" style="--delay: 4">Удачи</div>
+        <div class="wish" style="--delay: 5">Радости</div>
+        <div class="wish" style="--delay: 6">Улыбок</div>
+      </div>
+
+      <div class="flowers">
+        <div class="flower">🌹</div>
+        <div class="flower">🌷</div>
+        <div class="flower">🌼</div>
+        <div class="flower">🌸</div>
+      </div>
+
+      <div class="signature">С любовью, твой ребенок ❤️</div>
+    </div>
+
+    <script>
+      // Создание падающих сердечек
+      function createHearts() {
+        const container = document.querySelector(".container");
+        const heartCount = 20;
+
+        for (let i = 0; i < heartCount; i++) {
+          const heart = document.createElement("div");
+          heart.classList.add("heart");
+          heart.innerHTML = "❤️";
+          heart.style.left = Math.random() * 100 + "%";
+          heart.style.animationDelay = Math.random() * 5 + "s";
+          heart.style.fontSize = Math.random() * 20 + 15 + "px";
+          container.appendChild(heart);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", createHearts);
+    </script>
+  </body>
+</html>
